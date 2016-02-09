@@ -1,0 +1,208 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-08 18:15:30.002787 UTC
+
+interface heaps_D84gs2t4foVLGrEFu7URZk:Data.Heap.Array 7103
+  interface hash: daff5af31fe2a989784fbcf0ad3ece18
+  ABI hash: 1b7682568deb199714bda20603d7b65e
+  export-list hash: 82b61fdbbdae906b22d6c585a982fb92
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 29ef636f57b292ea786a4292ff6ad6c3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Heap.Array.Array
+module dependencies: Data.Heap Data.Tree
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59
+                      ghc-prim-0.4.0.0 integer-gmp-1.0.0.0
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Data.Heap c316440dee0b0f6f3d5c9bb0d94acc61
+  exports: 72654de8a7eb46b0acfe1267160e71ea
+  BinaryHeap c6706fc54da84cb03856b41e78dcdc65
+  Heap 59402278e0e614775a420ce522ce481b
+  Policy 7170b7ff5fec092231c5184299d62f4a
+  empty 176aec139eceee13bf29a273bc6984d1
+  insert 3acb7267f7249628ba8f71bdcef6fef9
+  isEmpty 0d2b658e703301bcba63c38ed34d2ed7
+  remove 71af70416e96c8ca5db7002eae8366a5
+  value 26957c9b158a78c950ce3ed4e876e5df
+import  -/  Data.Tree 9d66cae20ece06ae4f87f05558fc5f20
+  exports: 046b59743458e083a149366fc880a86c
+  BinaryTree 1858445b33a234e30535076559c21dfc
+  Empty f2323d700eed924a6c33feb640997b30
+  isEmpty 4894d40cc0a38a426b05f4a1f06a94c7
+  left 6985edc31d38d1133a0ea310c98612fd
+  right 2805299a3fc259ba906c3e37dd1afbf8
+  value 9434b142b0b44b47b3d2dfe982c54a38
+import  -/  vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector a9f7b451dffdbb06f50d91cda8c049eb
+9370f04743a559e2ec7b8014abd76f83
+  $fBinaryHeapArray :: Data.Heap.BinaryHeap Data.Heap.Array.Array
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Array.Array
+                  Data.Heap.Array.$fBinaryTreeArray
+                  Data.Heap.Array.$fHeapArray -}
+9370f04743a559e2ec7b8014abd76f83
+  $fBinaryTreeArray :: Data.Tree.BinaryTree Data.Heap.Array.Array
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Array.Array
+                  Data.Heap.Array.$fEmptyArray
+                  (\ @ a ->
+                   GHC.Err.undefined
+                     @ (Data.Heap.Array.Array a -> Data.Heap.Array.Array a))
+                  (\ @ a ->
+                   GHC.Err.undefined
+                     @ (Data.Heap.Array.Array a -> Data.Heap.Array.Array a)) -}
+9370f04743a559e2ec7b8014abd76f83
+  $fEmptyArray :: Data.Tree.Empty Data.Heap.Array.Array
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Array.Array
+                  Data.Heap.Array._value
+                  Data.Heap.Array._isEmpty -}
+9370f04743a559e2ec7b8014abd76f83
+  $fHeapArray :: Data.Heap.Heap Data.Heap.Array.Array
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Array.Array
+                  (\ @ a ->
+                   GHC.Err.undefined @ (Data.Heap.Policy -> Data.Heap.Array.Array a))
+                  Data.Heap.Array._isEmpty
+                  Data.Heap.Array._value
+                  Data.Heap.Array.$fHeapArray_$cinsert
+                  Data.Heap.Array.$fHeapArray_$cremove -}
+565fc86d07d932a815fa1313256844a2
+  $fHeapArray1 ::
+    Data.Vector.Generic.Base.Vector Data.Vector.Vector a
+  {- Unfolding: (\ @ a ->
+                 Data.Vector.$fVectorVectora
+                   @ a
+                   (Data.Vector.Mutable.$fMVectorMVectora @ a)
+                     `cast`
+                   (Data.Vector.Generic.Mutable.Base.MVector
+                      (Sym (Data.Vector.TFCo:R:MutableVector[0])) <a>_N)_R) -}
+5135e48db571ec5a1c385bb56e048a75
+  $fHeapArray2 ::
+    Data.Vector.Vector a -> Data.Vector.Fusion.Util.Id GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a eta :: Data.Vector.Vector a ->
+                 case eta of v2 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                 (GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.>=# 0 ipv1))
+                   `cast`
+                 (Sym (Data.Vector.Fusion.Util.NTCo:Id[0] <GHC.Types.Bool>_R)) }) -}
+9370f04743a559e2ec7b8014abd76f83
+  $fHeapArray_$cinsert ::
+    GHC.Classes.Ord a =>
+    a -> Data.Heap.Array.Array a -> Data.Heap.Array.Array a
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a $dOrd :: GHC.Classes.Ord a ->
+                 GHC.Err.undefined
+                   @ (a -> Data.Heap.Array.Array a -> Data.Heap.Array.Array a)) -}
+9370f04743a559e2ec7b8014abd76f83
+  $fHeapArray_$cremove ::
+    GHC.Classes.Ord a =>
+    Data.Heap.Array.Array a
+    -> (GHC.Base.Maybe a, Data.Heap.Array.Array a)
+  {- Arity: 1, Strictness: <B,A>b,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a $dOrd :: GHC.Classes.Ord a ->
+                 GHC.Err.undefined
+                   @ (Data.Heap.Array.Array a
+                      -> (GHC.Base.Maybe a, Data.Heap.Array.Array a))) -}
+7f6152366d6b5823c3aaa1d7d786958f
+  $w_value ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int# -> GHC.Prim.Array# a -> GHC.Base.Maybe a
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ @ a
+                   ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Prim.Int#
+                   ww2 :: GHC.Prim.Array# a ->
+                 case Data.Vector.Generic.length
+                        @ Data.Vector.Vector
+                        @ a
+                        (Data.Heap.Array.$fHeapArray1 @ a)
+                        (Data.Vector.Vector @ a ww ww1 ww2) of wild2 { GHC.Types.I# y ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# 0 y) of wild3 {
+                   GHC.Types.False
+                   -> GHC.Base.Just
+                        @ a
+                        (case GHC.Prim.indexArray# @ a ww2 ww of ds2 { (##) ipv -> ipv })
+                   GHC.Types.True -> GHC.Base.Nothing @ a } }) -}
+9370f04743a559e2ec7b8014abd76f83
+  newtype Array a = Array {vector :: Data.Vector.Vector a}
+9370f04743a559e2ec7b8014abd76f83
+  _isEmpty :: Data.Heap.Array.Array a -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,U,A)>,
+     Unfolding: InlineRule (0, True, True)
+                Data.Heap.Array.$fHeapArray2
+                  `cast`
+                (forall a.
+                 Sym (Data.Heap.Array.NTCo:Array[0]) <a>_N
+                 ->_R Data.Vector.Fusion.Util.NTCo:Id[0] <GHC.Types.Bool>_R) -}
+9370f04743a559e2ec7b8014abd76f83
+  _value :: Data.Heap.Array.Array a -> GHC.Base.Maybe a
+  {- Arity: 1, Strictness: <S,U(U,U,U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a w :: Data.Heap.Array.Array a ->
+                 case w `cast`
+                      (Data.Heap.Array.NTCo:Array[0] <a>_N) of ww { Data.Vector.Vector ww1 ww2 ww3 ->
+                 Data.Heap.Array.$w_value @ a ww1 ww2 ww3 }) -}
+8386bb4f4d7cd07fa1c82e693e0a6cf1
+  vector :: Data.Heap.Array.Array a -> Data.Vector.Vector a
+  RecSel Data.Heap.Array.Array
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Data.Heap.Array.vector1
+                  `cast`
+                (forall a.
+                 <Data.Heap.Array.Array a>_R
+                 ->_R Data.Heap.Array.NTCo:Array[0] <a>_N) -}
+793ce4c7825ec879ef8c5d5f4d884822
+  vector1 :: Data.Heap.Array.Array a -> Data.Heap.Array.Array a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a ds :: Data.Heap.Array.Array a -> ds) -}
+instance Data.Heap.BinaryHeap [Data.Heap.Array.Array]
+  = Data.Heap.Array.$fBinaryHeapArray
+instance Data.Tree.BinaryTree [Data.Heap.Array.Array]
+  = Data.Heap.Array.$fBinaryTreeArray
+instance Data.Tree.Empty [Data.Heap.Array.Array]
+  = Data.Heap.Array.$fEmptyArray
+instance Data.Heap.Heap [Data.Heap.Array.Array]
+  = Data.Heap.Array.$fHeapArray
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

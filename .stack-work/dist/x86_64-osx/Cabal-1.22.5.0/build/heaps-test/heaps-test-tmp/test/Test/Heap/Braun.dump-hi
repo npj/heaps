@@ -1,0 +1,349 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-08 22:02:32.752079 UTC
+
+interface main@main:Test.Heap.Braun 7103
+  interface hash: 06bb24a30fb264c6aeb67a58a234488e
+  ABI hash: ffb53bed34e8d8e2e6c21d643c91e3b7
+  export-list hash: 7853d6c1fa8a6b5a943af53226388c9e
+  orphan hash: d3e4df3c3fca78958b50a45f62c99db0
+  flag hash: 613decd179355f0b5aa28510e553dd6b
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Test.Heap.Braun.props
+module dependencies:
+package dependencies: QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      heaps-0.1.0.0@heaps_D84gs2t4foVLGrEFu7URZk integer-gmp-1.0.0.0
+                      pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL template-haskell-2.10.0.0
+                      tf-random-0.5@tfran_1eLmkn3WUnC8NZpPuDLGKF
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s:Test.QuickCheck 437de8bc77c4cf58d9f8e24d5f1189e0
+import  -/  QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s:Test.QuickCheck.All 425c51786ffaf0a8ebe30d82e29c7b46
+import  -/  QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s:Test.QuickCheck.Property e621bdae1a9f4f1e88483ede75805e78
+import  -/  QuickCheck-2.8.1@Quick_8UnGnTXfSEEClQczG6tI7s:Test.QuickCheck.Test ae728fd27966527a3b1d17652b6bcea2
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  heaps-0.1.0.0@heaps_D84gs2t4foVLGrEFu7URZk:Data.Heap c316440dee0b0f6f3d5c9bb0d94acc61
+import  -/  heaps-0.1.0.0@heaps_D84gs2t4foVLGrEFu7URZk:Data.Heap.Braun 7442afa52574e82821076cfbb82f487a
+import  -/  heaps-0.1.0.0@heaps_D84gs2t4foVLGrEFu7URZk:Data.Tree 9d66cae20ece06ae4f87f05558fc5f20
+fee80cf805129f2478640463f770b2bd
+  $s$fArbitrary[] ::
+    Test.QuickCheck.Arbitrary.Arbitrary [GHC.Types.Int]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [GHC.Types.Int]
+                  (Test.QuickCheck.Arbitrary.$fArbitrary[]_$carbitrary
+                     @ GHC.Types.Int
+                     Test.QuickCheck.Arbitrary.$fArbitraryInt)
+                  Test.Heap.Braun.$s$fArbitrary[]1 -}
+d127a47f9ec046a3608270046baa22e9
+  $s$fArbitrary[]1 :: [GHC.Types.Int] -> [[GHC.Types.Int]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ xs :: [GHC.Types.Int] ->
+                 Test.QuickCheck.Arbitrary.shrinkList
+                   @ GHC.Types.Int
+                   Test.QuickCheck.Arbitrary.$fArbitraryInt_$sshrinkIntegral
+                   xs) -}
+280b5ceff2c6c818cc0efe6e213efe3b
+  $s$fTestable(->) ::
+    Test.QuickCheck.Property.Testable
+      ([GHC.Types.Int] -> Test.QuickCheck.Property.Property)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ([GHC.Types.Int] -> Test.QuickCheck.Property.Property)
+                  (Test.QuickCheck.Property.$fTestable(->)_$cproperty
+                     @ [GHC.Types.Int]
+                     @ Test.QuickCheck.Property.Property
+                     Test.Heap.Braun.$s$fTestable(->)_$dArbitrary
+                     GHC.Show.$fShow[]_$s$fShow[]
+                     Test.QuickCheck.Property.$fTestableProperty)
+                  Test.Heap.Braun.$s$fTestable(->)_$s$fTestable(->)_$cexhaustive -}
+98fde6e23bf45a2aabaf922446580cc5
+  $s$fTestable(->)_$dArbitrary ::
+    Test.QuickCheck.Arbitrary.Arbitrary [GHC.Types.Int]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Test.Heap.Braun.$s$fArbitrary[] -}
+77abac5eea6403ad92d185d1f421b837
+  $s$fTestable(->)_$s$fTestable(->)_$cexhaustive ::
+    ([GHC.Types.Int] -> Test.QuickCheck.Property.Property)
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ ds :: [GHC.Types.Int] -> Test.QuickCheck.Property.Property ->
+                 GHC.Types.False) -}
+20d85ab7763b408bae2a2c70f4ee883a
+  props :: GHC.Types.IO GHC.Types.Bool
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Test.Heap.Braun.props1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Bool>_R)) -}
+6f4fa72680a1457e416b6fdc4027fedc
+  props1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 1,
+     Unfolding: (Test.QuickCheck.All.runQuickCheckAll1
+                   Test.Heap.Braun.props3
+                   Test.Heap.Braun.props2
+                     `cast`
+                   (<Test.QuickCheck.Property.Property>_R
+                    ->_R Sym (GHC.Types.NTCo:IO[0]
+                                  <Test.QuickCheck.Test.Result>_R))) -}
+979fb52476377b2075c751394735695b
+  props10 :: ([GHC.Types.Char], Test.QuickCheck.Property.Property)
+  {- Strictness: m,
+     Unfolding: ((Test.Heap.Braun.props13,
+                  Test.Heap.Braun.props11
+                    `cast`
+                  (Trans
+                       (Sym (Test.QuickCheck.Gen.NTCo:Gen[0]
+                                 (Test.QuickCheck.Property.NTCo:Prop[0])))
+                       (Sym (Test.QuickCheck.Property.NTCo:Property[0]))))) -}
+dedd221cde2b98726336230519257c5c
+  props11 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int
+    -> Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Arity: 2, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ ds :: Test.QuickCheck.Random.QCGen ds1 :: GHC.Types.Int ->
+                 Test.Heap.Braun.props_a5) -}
+aeef366f0eec350bdc2eddbd619b7b51
+  props12 ::
+    Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- HasNoCafRefs,
+     Unfolding: (Test.QuickCheck.Property.MkRose
+                   @ Test.QuickCheck.Property.Result
+                   Test.QuickCheck.Property.succeeded
+                   (GHC.Types.[]
+                      @ (Test.QuickCheck.Property.Rose
+                           Test.QuickCheck.Property.Result))) -}
+27238b708589b177baf8a4203f4a700d
+  props13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "prop_noValueMax from test/Test/Heap/Braun.hs:19"#) -}
+6bd51a7548996400ecb4d72890924d1b
+  props14 :: ([GHC.Types.Char], Test.QuickCheck.Property.Property)
+  {- Strictness: m,
+     Unfolding: ((Test.Heap.Braun.props15,
+                  Test.Heap.Braun.props11
+                    `cast`
+                  (Trans
+                       (Sym (Test.QuickCheck.Gen.NTCo:Gen[0]
+                                 (Test.QuickCheck.Property.NTCo:Prop[0])))
+                       (Sym (Test.QuickCheck.Property.NTCo:Property[0]))))) -}
+65515cbe68ac8311d7ce4095a0d69a16
+  props15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "prop_noValueMin from test/Test/Heap/Braun.hs:17"#) -}
+b22988a34237dff27ab26cb6a4decd13
+  props2 ::
+    Test.QuickCheck.Property.Property
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.QuickCheck.Test.Result #)
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ p :: Test.QuickCheck.Property.Property
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 Test.QuickCheck.Test.$wa7
+                   @ Test.QuickCheck.Property.Property
+                   Test.QuickCheck.Property.$fTestableProperty
+                   (GHC.Base.Nothing @ (Test.QuickCheck.Random.QCGen, GHC.Types.Int))
+                   Test.QuickCheck.Test.stdArgs2
+                   Test.QuickCheck.Test.stdArgs1
+                   Test.QuickCheck.Test.stdArgs2
+                   GHC.Types.True
+                   p
+                   eta) -}
+cdca4bfa2611326f42f3ac719f952921
+  props3 :: [(GHC.Base.String, Test.QuickCheck.Property.Property)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, Test.QuickCheck.Property.Property)
+                   Test.Heap.Braun.props14
+                   Test.Heap.Braun.props4) -}
+acdbb7bd0b188996a78a042adc5d4c30
+  props4 :: [(GHC.Base.String, Test.QuickCheck.Property.Property)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, Test.QuickCheck.Property.Property)
+                   Test.Heap.Braun.props10
+                   Test.Heap.Braun.props5) -}
+cac1b7530a63d18bb0f488c3cdcb0425
+  props5 :: [(GHC.Base.String, Test.QuickCheck.Property.Property)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, Test.QuickCheck.Property.Property)
+                   Test.Heap.Braun.props6
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, Test.QuickCheck.Property.Property))) -}
+3f542fed0ddf422e0db945ef5d17f48a
+  props6 :: ([GHC.Types.Char], Test.QuickCheck.Property.Property)
+  {- Strictness: m,
+     Unfolding: ((Test.Heap.Braun.props9,
+                  Test.Heap.Braun.props7
+                    `cast`
+                  (Trans
+                       (Sym (Test.QuickCheck.Gen.NTCo:Gen[0]
+                                 <Test.QuickCheck.Property.Prop>_R))
+                       (Sym (Test.QuickCheck.Property.NTCo:Property[0]))))) -}
+ef76db517bac374e4e4ee98633a4c861
+  props7 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> Test.QuickCheck.Property.Prop
+  {- Arity: 2, Strictness: <L,1*U(U,U,U,1*U,A,A)><L,U(U)>,
+     Unfolding: (\ eta :: Test.QuickCheck.Random.QCGen
+                   eta1 :: GHC.Types.Int ->
+                 let {
+                   ds1 :: (System.Random.TF.Gen.TFGen, System.Random.TF.Gen.TFGen)
+                   = case eta
+                            `cast`
+                          (Test.QuickCheck.Random.NTCo:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                     case System.Random.TF.Gen.$wtfGenSplit
+                            ww1
+                            ww2
+                            ww3
+                            ww4 of ww7 { (#,#) ww8 ww9 ->
+                     (ww8, ww9) } }
+                 } in
+                 (Test.QuickCheck.Property.$fTestable(->)3
+                    @ GHC.Types.Int
+                    @ Test.QuickCheck.Property.Property
+                    Test.QuickCheck.Property.$fTestableProperty
+                    Test.QuickCheck.Arbitrary.$fArbitraryInt_$sshrinkIntegral
+                    (case eta1 of ww { GHC.Types.I# ww1 ->
+                     case Test.QuickCheck.Arbitrary.$wa6
+                            (case ds1 of wild { (,) g1 g2 ->
+                             g1 `cast` (Sym (Test.QuickCheck.Random.NTCo:QCGen[0])) })
+                            ww1 of ww2 { DEFAULT ->
+                     GHC.Types.I# ww2 } })
+                    Test.Heap.Braun.props8)
+                   `cast`
+                 (Test.QuickCheck.Gen.NTCo:Gen[0] <Test.QuickCheck.Property.Prop>_R)
+                   (case ds1 of wild { (,) g1 g2 ->
+                    g2 `cast` (Sym (Test.QuickCheck.Random.NTCo:QCGen[0])) })
+                   eta1) -}
+56310ff7fcee7cb86bb73b19436a103d
+  props8 :: GHC.Types.Int -> Test.QuickCheck.Property.Property
+  {- Arity: 1,
+     Unfolding: (\ x' :: GHC.Types.Int ->
+                 Test.QuickCheck.Property.counterexample
+                   @ ([GHC.Types.Int] -> Test.QuickCheck.Property.Property)
+                   Test.Heap.Braun.$s$fTestable(->)
+                   (case x' of ww2 { GHC.Types.I# ww3 ->
+                    case GHC.Show.$wshowSignedInt
+                           0
+                           ww3
+                           (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                    GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                   (\ xs :: [GHC.Types.Int] ->
+                    case Test.Heap.Braun.props_go1 xs of wild {
+                      Data.Heap.Braun.Nil ds1
+                      -> let {
+                           a5 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                           = Test.QuickCheck.Property.protectResults
+                               (Test.QuickCheck.Property.MkRose
+                                  @ Test.QuickCheck.Property.Result
+                                  (case Data.Heap.Braun.$w_insert
+                                          @ GHC.Types.Int
+                                          GHC.Classes.$fOrdInt
+                                          x'
+                                          (Test.Heap.Braun.props_go
+                                             xs) of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                                   Test.QuickCheck.Property.succeeded })
+                                  (GHC.Types.[]
+                                     @ (Test.QuickCheck.Property.Rose
+                                          Test.QuickCheck.Property.Result)))
+                         } in
+                         (\ ds :: Test.QuickCheck.Random.QCGen ds2 :: GHC.Types.Int -> a5)
+                           `cast`
+                         (Trans
+                              (Sym (Test.QuickCheck.Gen.NTCo:Gen[0]
+                                        (Test.QuickCheck.Property.NTCo:Prop[0])))
+                              (Sym (Test.QuickCheck.Property.NTCo:Property[0])))
+                      Data.Heap.Braun.Node ipv ipv1 ipv2 ipv3
+                      -> Test.QuickCheck.Property.$fTestableDiscard2
+                           `cast`
+                         (Trans
+                              (Sym (Test.QuickCheck.Gen.NTCo:Gen[0]
+                                        (Test.QuickCheck.Property.NTCo:Prop[0])))
+                              (Sym (Test.QuickCheck.Property.NTCo:Property[0]))) })) -}
+89b4aa45734828e744371b9898d80c93
+  props9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "prop_nonEmptyMin from test/Test/Heap/Braun.hs:22"#) -}
+6d1f4f4f816099d8a77ee713adfd150e
+  props_a5 ::
+    Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+  {- Unfolding: (Test.QuickCheck.Property.protectResults
+                   Test.Heap.Braun.props12) -}
+0b7136eea0a8a78c4fc2b9c71c964177
+  props_go :: [GHC.Types.Int] -> Data.Heap.Braun.Braun GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+52e350d6f970c6651d0d4ee8684a8ee4
+  props_go1 :: [GHC.Types.Int] -> Data.Heap.Braun.Braun GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+"SPEC/Test.Heap.Braun $fArbitrary[] @ Int" [ALWAYS] forall $dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                            GHC.Types.Int
+  Test.QuickCheck.Arbitrary.$fArbitrary[] @ GHC.Types.Int $dArbitrary
+  = Test.Heap.Braun.$s$fArbitrary[]
+"SPEC/Test.Heap.Braun $fTestable(->) @ [Int] @ Property" [ALWAYS] forall $dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                          [GHC.Types.Int]
+                                                                         $dShow :: GHC.Show.Show
+                                                                                     [GHC.Types.Int]
+                                                                         $dTestable :: Test.QuickCheck.Property.Testable
+                                                                                         Test.QuickCheck.Property.Property
+  Test.QuickCheck.Property.$fTestable(->) @ [GHC.Types.Int]
+                                          @ Test.QuickCheck.Property.Property
+                                          $dArbitrary
+                                          $dShow
+                                          $dTestable
+  = Test.Heap.Braun.$s$fTestable(->)
+"SPEC/Test.Heap.Braun $fTestable(->)_$cexhaustive @ [Int] @ Property" [ALWAYS] forall $dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary
+                                                                                                       [GHC.Types.Int]
+                                                                                      $dShow :: GHC.Show.Show
+                                                                                                  [GHC.Types.Int]
+                                                                                      $dTestable :: Test.QuickCheck.Property.Testable
+                                                                                                      Test.QuickCheck.Property.Property
+  Test.QuickCheck.Property.$fTestable(->)_$cexhaustive @ [GHC.Types.Int]
+                                                       @ Test.QuickCheck.Property.Property
+                                                       $dArbitrary
+                                                       $dShow
+                                                       $dTestable
+  = Test.Heap.Braun.$s$fTestable(->)_$s$fTestable(->)_$cexhaustive
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,269 @@
+
+==================== FINAL INTERFACE ====================
+2016-02-08 18:15:28.961804 UTC
+
+interface heaps_D84gs2t4foVLGrEFu7URZk:Data.Heap.Braun 7103
+  interface hash: b56f14edb68cecbe8fda16ffd8f00f4b
+  ABI hash: 7442afa52574e82821076cfbb82f487a
+  export-list hash: 6a8b5f351741ca8fca4202652f8977ed
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 29ef636f57b292ea786a4292ff6ad6c3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Data.Heap.Braun.Braun
+module dependencies: Data.Heap Data.Tree
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  Data.Heap c316440dee0b0f6f3d5c9bb0d94acc61
+  exports: 72654de8a7eb46b0acfe1267160e71ea
+  BinaryHeap c6706fc54da84cb03856b41e78dcdc65
+  Heap 59402278e0e614775a420ce522ce481b
+  Max 5fda595bbb67ad81b64af8551b684ea1
+  Min 3f1621155db28544ed40377a3bd1fa2f
+  Policy 7170b7ff5fec092231c5184299d62f4a
+  empty 176aec139eceee13bf29a273bc6984d1
+  insert 3acb7267f7249628ba8f71bdcef6fef9
+  isEmpty 0d2b658e703301bcba63c38ed34d2ed7
+  remove 71af70416e96c8ca5db7002eae8366a5
+  value 26957c9b158a78c950ce3ed4e876e5df
+import  -/  Data.Tree 9d66cae20ece06ae4f87f05558fc5f20
+  exports: 046b59743458e083a149366fc880a86c
+  BinaryTree 1858445b33a234e30535076559c21dfc
+  Empty f2323d700eed924a6c33feb640997b30
+  isEmpty 4894d40cc0a38a426b05f4a1f06a94c7
+  left 6985edc31d38d1133a0ea310c98612fd
+  right 2805299a3fc259ba906c3e37dd1afbf8
+  value 9434b142b0b44b47b3d2dfe982c54a38
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fBinaryHeapBraun :: Data.Heap.BinaryHeap Data.Heap.Braun.Braun
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Braun.Braun
+                  Data.Heap.Braun.$fBinaryTreeBraun
+                  Data.Heap.Braun.$fHeapBraun -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fBinaryTreeBraun :: Data.Tree.BinaryTree Data.Heap.Braun.Braun
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Braun.Braun
+                  Data.Heap.Braun.$fEmptyBraun
+                  Data.Heap.Braun.$fBinaryTreeBraun_$cleft
+                  Data.Heap.Braun.$fBinaryTreeBraun_$cright -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fBinaryTreeBraun_$cleft ::
+    Data.Heap.Braun.Braun a -> Data.Heap.Braun.Braun a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ds :: Data.Heap.Braun.Braun a ->
+                 case ds of wild {
+                   Data.Heap.Braun.Nil p -> Data.Heap.Braun.Nil @ a p
+                   Data.Heap.Braun.Node ds1 ds2 lt ds3 -> lt }) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fBinaryTreeBraun_$cright ::
+    Data.Heap.Braun.Braun a -> Data.Heap.Braun.Braun a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ds :: Data.Heap.Braun.Braun a ->
+                 case ds of wild {
+                   Data.Heap.Braun.Nil p -> Data.Heap.Braun.Nil @ a p
+                   Data.Heap.Braun.Node ds1 ds2 ds3 rt -> rt }) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fEmptyBraun :: Data.Tree.Empty Data.Heap.Braun.Braun
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Braun.Braun
+                  Data.Heap.Braun._value
+                  Data.Heap.Braun._isEmpty -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fHeapBraun :: Data.Heap.Heap Data.Heap.Braun.Braun
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.Heap.Braun.Braun
+                  Data.Heap.Braun.Nil
+                  Data.Heap.Braun._isEmpty
+                  Data.Heap.Braun._value
+                  Data.Heap.Braun._insert
+                  Data.Heap.Braun._remove -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fShowBraun ::
+    GHC.Show.Show a => GHC.Show.Show (Data.Heap.Braun.Braun a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a $dShow :: GHC.Show.Show a.
+                  @ (Data.Heap.Braun.Braun a)
+                  (Data.Heap.Braun.$fShowBraun_$cshowsPrec @ a $dShow)
+                  (Data.Heap.Braun.$fShowBraun_$cshow @ a $dShow)
+                  (Data.Heap.Braun.$fShowBraun_$cshowList @ a $dShow) -}
+a06c26b2a41997393fc81328b9cbd6bb
+  $fShowBraun1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fShowBraun_$cshow ::
+    GHC.Show.Show a => Data.Heap.Braun.Braun a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a $dShow :: GHC.Show.Show a x :: Data.Heap.Braun.Braun a ->
+                 Data.Heap.Braun.$fShowBraun_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fShowBraun_$cshowList ::
+    GHC.Show.Show a => [Data.Heap.Braun.Braun a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   $dShow :: GHC.Show.Show a
+                   eta :: [Data.Heap.Braun.Braun a]
+                   eta1 :: GHC.Base.String ->
+                 GHC.Show.showList__
+                   @ (Data.Heap.Braun.Braun a)
+                   (Data.Heap.Braun.$fShowBraun_$cshowsPrec
+                      @ a
+                      $dShow
+                      Data.Heap.Braun.$fShowBraun1)
+                   eta
+                   eta1) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $fShowBraun_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> Data.Heap.Braun.Braun a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   w :: GHC.Show.Show a
+                   w1 :: GHC.Types.Int
+                   w2 :: Data.Heap.Braun.Braun a ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 Data.Heap.Braun.$w$cshowsPrec @ a w ww1 w2 }) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $w$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int# -> Data.Heap.Braun.Braun a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><L,U><S,1*U>,
+     Inline: [0] -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $w_insert ::
+    GHC.Classes.Ord a =>
+    a
+    -> Data.Heap.Braun.Braun a
+    -> (# Data.Heap.Policy,
+          a,
+          Data.Heap.Braun.Braun a,
+          Data.Heap.Braun.Braun a #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,C(C1(U)),A,C(C1(U)),A,A)><L,U><S,1*U>,
+     Inline: [0] -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  $wtakeLast ::
+    Data.Heap.Braun.Braun a -> (# a, Data.Heap.Braun.Braun a #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  data Braun a
+    = Nil Data.Heap.Policy
+    | Node Data.Heap.Policy
+           a
+           (Data.Heap.Braun.Braun a)
+           (Data.Heap.Braun.Braun a)
+    Promotable
+958eeeb8acdb58b89d88c75e00b11ba5
+  _insert ::
+    GHC.Classes.Ord a =>
+    a -> Data.Heap.Braun.Braun a -> Data.Heap.Braun.Braun a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,C(C1(U)),A,C(C1(U)),A,A)><L,U><S,1*U>m2,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   w :: GHC.Classes.Ord a
+                   w1 :: a
+                   w2 :: Data.Heap.Braun.Braun a ->
+                 case Data.Heap.Braun.$w_insert
+                        @ a
+                        w
+                        w1
+                        w2 of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                 Data.Heap.Braun.Node @ a ww1 ww2 ww3 ww4 }) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  _isEmpty :: Data.Heap.Braun.Braun a -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ds :: Data.Heap.Braun.Braun a ->
+                 case ds of wild {
+                   Data.Heap.Braun.Nil ds1 -> GHC.Types.True
+                   Data.Heap.Braun.Node ipv ipv1 ipv2 ipv3 -> GHC.Types.False }) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  _remove ::
+    GHC.Classes.Ord a =>
+    Data.Heap.Braun.Braun a
+    -> (GHC.Base.Maybe a, Data.Heap.Braun.Braun a)
+  {- Arity: 2,
+     Strictness: <L,U(A,A,A,C(C1(U)),A,C(C1(U)),A,A)><S,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a w :: GHC.Classes.Ord a w1 :: Data.Heap.Braun.Braun a ->
+                 case w1 of wild {
+                   Data.Heap.Braun.Nil p
+                   -> (GHC.Base.Nothing @ a, Data.Heap.Braun.Nil @ a p)
+                   Data.Heap.Braun.Node p v lt rt
+                   -> case lt of wild1 {
+                        Data.Heap.Braun.Nil ds
+                        -> (GHC.Base.Just @ a v, Data.Heap.Braun.Nil @ a p)
+                        Data.Heap.Braun.Node ipv ipv1 ipv2 ipv3
+                        -> case rt of wild2 {
+                             Data.Heap.Braun.Nil ds -> (GHC.Base.Just @ a v, wild1)
+                             Data.Heap.Braun.Node ipv4 ipv5 ipv6 ipv7
+                             -> (GHC.Base.Just @ a v,
+                                 case Data.Heap.Braun.$wtakeLast @ a wild of ww { (#,#) ww1 ww2 ->
+                                 Data.Heap.Braun.replace @ a w ww1 ww2 }) } } }) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  _value :: Data.Heap.Braun.Braun a -> GHC.Base.Maybe a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a ds :: Data.Heap.Braun.Braun a ->
+                 case ds of wild {
+                   Data.Heap.Braun.Nil ipv -> GHC.Base.Nothing @ a
+                   Data.Heap.Braun.Node ds1 r ds2 ds3 -> GHC.Base.Just @ a r }) -}
+958eeeb8acdb58b89d88c75e00b11ba5
+  replace ::
+    GHC.Classes.Ord a =>
+    a -> Data.Heap.Braun.Braun a -> Data.Heap.Braun.Braun a
+  {- Arity: 3,
+     Strictness: <L,U(A,A,A,C(C1(U)),A,C(C1(U)),A,A)><L,U><S,1*U> -}
+instance Data.Heap.BinaryHeap [Data.Heap.Braun.Braun]
+  = Data.Heap.Braun.$fBinaryHeapBraun
+instance Data.Tree.BinaryTree [Data.Heap.Braun.Braun]
+  = Data.Heap.Braun.$fBinaryTreeBraun
+instance Data.Tree.Empty [Data.Heap.Braun.Braun]
+  = Data.Heap.Braun.$fEmptyBraun
+instance Data.Heap.Heap [Data.Heap.Braun.Braun]
+  = Data.Heap.Braun.$fHeapBraun
+instance GHC.Show.Show [Data.Heap.Braun.Braun]
+  = Data.Heap.Braun.$fShowBraun
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
