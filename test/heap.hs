@@ -1,4 +1,6 @@
-module Test.Heap
+{-# LANGUAGE TemplateHaskell #-}
+
+module Heap
 ( properties
 ) where
 
@@ -7,6 +9,8 @@ import Test.Tasty.QuickCheck (testProperty)
 
 import Test.QuickCheck ((==>))
 import Test.QuickCheck.Modifiers (NonEmptyList(NonEmpty))
+
+import Language.Haskell.Extract (functionExtractorMap)
 
 import Data.Maybe (isJust, isNothing)
 import Data.List (sort)
@@ -24,30 +28,22 @@ builders :: [(String, Builder)]
 builders = [
     ("Braun Min Heap", Braun(H.fromList H.Min))
   , ("Braun Max Heap", Braun(H.fromList H.Max))
-  , ("Leftist Min Heap", Leftist(H.fromList H.Min))
-  , ("Leftist Max Heap", Leftist(H.fromList H.Max))
+--  , ("Leftist Min Heap", Leftist(H.fromList H.Min))
+--  , ("Leftist Max Heap", Leftist(H.fromList H.Max))
   ]
 
 heapPropertiesFor :: Builder -> [TestTree]
-heapPropertiesFor (Braun builder)   = heapProperties builder
-heapPropertiesFor (Leftist builder) = heapProperties builder
+heapPropertiesFor (Braun f)   = map ($ f) heapProperties
+heapPropertiesFor (Leftist f) = map ($ f) heapProperties
 
-heapProperties :: (H.Heap h) => FromList h -> [TestTree]
-heapProperties builder = map ($ builder) [
-    testProperty "value"                  . prop_value
-  , testProperty "no value"               . prop_noValue
-  , testProperty "is empty"               . prop_isEmpty
-  , testProperty "non empty after insert" . prop_nonEmptyAfterInsert
-  , testProperty "empty after remove"     . prop_emptyAfterRemove
-  , testProperty "size after insert"      . prop_sizeAfterInsert
-  , testProperty "size after remove"      . prop_sizeAfterRemove
-  , testProperty "value at root"          . prop_root
-  , testProperty "heapsort"               . prop_sort
-  ]
+-- finds all functions with a "prop_" prefix and turns them into Tasty tests
+-- which expect a contrete H.fromList implementation
+heapProperties :: (H.Heap h) => [FromList h -> TestTree]
+heapProperties = $(functionExtractorMap "^prop_" [| \l f -> testProperty l . f |])
 
 properties :: TestTree
-properties = testGroup "Heap Properties" (map props builders)
-  where props (label, builder) = testGroup label $ heapPropertiesFor builder
+properties = testGroup "Heap Properties" . map group $ builders
+  where group (label, builder) = testGroup label $ heapPropertiesFor builder
 
 -- an empty heap has Nothing as its value
 prop_noValue :: (H.Heap h) => FromList h -> Bool

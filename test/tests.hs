@@ -2,7 +2,7 @@ import Test.QuickCheck
 
 import Test.Tasty (TestTree, defaultMain, testGroup)
 
-import qualified Test.Heap as Heap (properties)
+import qualified Heap as Heap (properties)
 
 tests = Heap.properties
 
