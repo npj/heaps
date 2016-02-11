@@ -33,16 +33,16 @@ heapPropertiesFor (Braun builder)   = heapProperties builder
 heapPropertiesFor (Leftist builder) = heapProperties builder
 
 heapProperties :: (H.Heap h) => FromList h -> [TestTree]
-heapProperties builder = [
-    testProperty "value"                  $ prop_value builder
-  , testProperty "no value"               $ prop_noValue builder
-  , testProperty "is empty"               $ prop_isEmpty builder
-  , testProperty "non empty after insert" $ prop_nonEmptyAfterInsert builder
-  , testProperty "empty after remove"     $ prop_emptyAfterRemove builder
-  , testProperty "size after insert"      $ prop_sizeAfterInsert builder
-  , testProperty "size after remove"      $ prop_sizeAfterRemove builder
-  , testProperty "value at root"          $ prop_root builder
-  , testProperty "heapsort"               $ prop_sort builder
+heapProperties builder = map ($ builder) [
+    testProperty "value"                  . prop_value
+  , testProperty "no value"               . prop_noValue
+  , testProperty "is empty"               . prop_isEmpty
+  , testProperty "non empty after insert" . prop_nonEmptyAfterInsert
+  , testProperty "empty after remove"     . prop_emptyAfterRemove
+  , testProperty "size after insert"      . prop_sizeAfterInsert
+  , testProperty "size after remove"      . prop_sizeAfterRemove
+  , testProperty "value at root"          . prop_root
+  , testProperty "heapsort"               . prop_sort
   ]
 
 properties :: TestTree
