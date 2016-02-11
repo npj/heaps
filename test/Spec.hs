@@ -1,6 +1,11 @@
 import Test.QuickCheck
 
-import qualified Test.Heap.Braun as Braun (props)
+import Test.Tasty (TestTree, defaultMain, testGroup)
+
+import qualified Test.Heap as Heap (properties)
+
+tests = Heap.properties
 
 main :: IO ()
-main = Braun.props >> return ()
+main = defaultMain tests
+

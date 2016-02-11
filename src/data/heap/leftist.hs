@@ -17,13 +17,19 @@ instance T.BinaryTree Leftist where
   right = _right
 
 instance H.Heap Leftist where
+  policy  = _policy
   empty   = _empty
   isEmpty = _isEmpty
   value   = _value
   insert  = _insert
   remove  = _remove
+  size    = T.size
 
 instance H.BinaryHeap Leftist
+
+_policy :: Leftist a -> H.Policy
+_policy (Nil p) = p
+_policy (Node p _ _ _ _) = p
 
 _empty :: H.Policy -> Leftist a
 _empty p = Nil p

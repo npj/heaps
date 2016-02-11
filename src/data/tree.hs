@@ -5,6 +5,7 @@ module Data.Tree
 , isEmpty
 , left
 , right
+, size
 , prettify
 ) where
 
@@ -18,6 +19,11 @@ class Empty t where
 class (Empty t) => BinaryTree t where
   left  :: t a -> t a
   right :: t a -> t a
+
+  size  :: t a -> Int
+  size t = if isEmpty t
+              then 0
+              else (size . left $ t) + (size . right $ t) + 1
 
 prettify :: (BinaryTree t, Show a) => t a -> String
 prettify = prettify' 0

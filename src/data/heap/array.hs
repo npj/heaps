@@ -20,13 +20,18 @@ instance T.BinaryTree Array where
   right = _right
 
 instance H.Heap Array where
+  policy  = _policy
   empty   = _empty
   isEmpty = _isEmpty
   value   = _value
   insert  = _insert
   remove  = _remove
+  size    = T.size
 
 instance H.BinaryHeap Array
+
+_policy :: Array a -> H.Policy
+_policy = undefined
 
 _value :: Array a -> Maybe a
 _value = (!? 0) . vector
