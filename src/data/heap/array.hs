@@ -1,55 +1,73 @@
-module Data.Heap.Array
-( Array
-) where
-
-import Data.Maybe (fromJust)
-import Data.Vector ((!), (!?))
-import qualified Data.Vector as V (Vector)
-
-import qualified Data.Heap as H
-import qualified Data.Tree as T
-
-newtype Array a = Array { vector :: V.Vector a }
-
-instance T.Empty Array where
-  value   = _value
-  isEmpty = _isEmpty
-
-instance T.BinaryTree Array where
-  left  = _left
-  right = _right
-
-instance H.Heap Array where
-  policy  = _policy
-  empty   = _empty
-  isEmpty = _isEmpty
-  value   = _value
-  insert  = _insert
-  remove  = _remove
-  size    = T.size
-
-instance H.BinaryHeap Array
-
-_policy :: Array a -> H.Policy
-_policy = undefined
-
-_value :: Array a -> Maybe a
-_value = (!? 0) . vector
-
-_isEmpty :: Array a -> Bool
-_isEmpty = null . vector
-
-_left :: Array a -> Array a
-_left = undefined
-
-_right :: Array a -> Array a
-_right = undefined
-
-_empty :: H.Policy -> Array a
-_empty = undefined
-
-_insert :: a -> Array a -> Array a
-_insert = undefined
-
-_remove :: Array a -> (Maybe a, Array a)
-_remove = undefined
+module Data.Heap.Array where
+-- ( Array
+-- ) where
+-- 
+-- import Data.Maybe (fromJust)
+-- import Data.Vector ((!), (!?))
+-- import qualified Data.Vector as V (Vector)
+-- 
+-- import qualified Data.Heap as H
+-- import qualified Data.Tree as T
+-- 
+-- data Array a = Array H.Policy (V.Vector a)
+-- 
+-- instance T.Empty Array where
+--   value   = _value
+--   isEmpty = _isEmpty
+-- 
+-- instance T.BinaryTree Array where
+--   left  = _left
+--   right = _right
+-- 
+-- instance H.Heap Array where
+--   policy  = _policy
+--   empty   = _empty
+--   isEmpty = _isEmpty
+--   value   = _value
+--   insert  = _insert
+--   remove  = _remove
+--   size    = _size
+-- 
+-- instance H.BinaryHeap Array
+-- 
+-- _policy :: Array a -> H.Policy
+-- _policy (Array p _) = p
+-- 
+-- _value :: Array a -> Maybe a
+-- _value (Array _ vector) = vector !? 0
+-- 
+-- _isEmpty :: Array a -> Bool
+-- _isEmpty (Array _ vector) = V.null vector
+-- 
+-- _left :: Array a -> Array a
+-- _left (Array _ vector) = V.drop 1 vector
+-- 
+-- _right :: Array a -> Array a
+-- _right (Array _ vector) = V.drop 2 vector
+-- 
+-- _empty :: H.Policy -> Array a
+-- _empty p = Array p V.empty
+-- 
+-- -- turn the immutable vector into a mutable one (efficiently)
+-- -- operator on the mutable vector within the ST monad
+-- -- turn the mutable vector into an immutable one (efficiently)
+-- _insert :: a -> Array a -> Array a
+-- _insert e (Array _ vector) = runST (mutable') $ do
+--   vector' <- grow vector 1
+--   write vector' (length vector') e
+--   return (reheapify vector')
+--   where mutable' = V.snoc vector e
+-- 
+-- _remove :: Array a -> (Maybe a, Array a)
+-- _remove = undefined
+-- 
+-- _size :: Array a -> Int
+-- _size (Array _ vector) = V.length vector
+-- 
+-- -- private
+-- parentIndex :: Int -> Int
+-- parentIndex i = (2 - i) `div` 2
+-- 
+-- -- private
+-- reheapify = undefined
+-- 
