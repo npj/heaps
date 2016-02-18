@@ -4,8 +4,8 @@ module Heap
 ( properties
 ) where
 
-import Test.Tasty (TestTree, testGroup)
-import Test.Tasty.QuickCheck (testProperty)
+import Test.Tasty (TestTree, testGroup, localOption)
+import Test.Tasty.QuickCheck (testProperty, QuickCheckTests(..))
 
 import Test.QuickCheck ((==>))
 import Test.QuickCheck.Modifiers (NonEmptyList(NonEmpty))
@@ -41,8 +41,11 @@ heapPropertiesFor (Leftist f) = map ($ f) heapProperties
 heapProperties :: (H.Heap h) => [FromList h -> TestTree]
 heapProperties = $(functionExtractorMap "^prop_" [| \l f -> testProperty l . f |])
 
+withOptions :: TestTree -> TestTree
+withOptions = localOption (QuickCheckTests 1000)
+
 properties :: TestTree
-properties = testGroup "Heap Properties" . map group $ builders
+properties = withOptions $ testGroup "Heap Properties" . map group $ builders
   where group (label, builder) = testGroup label $ heapPropertiesFor builder
 
 -- an empty heap has Nothing as its value
