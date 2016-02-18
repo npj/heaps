@@ -28,8 +28,8 @@ builders :: [(String, Builder)]
 builders = [
     ("Braun Min Heap", Braun(H.fromList H.Min))
   , ("Braun Max Heap", Braun(H.fromList H.Max))
---  , ("Leftist Min Heap", Leftist(H.fromList H.Min))
---  , ("Leftist Max Heap", Leftist(H.fromList H.Max))
+  , ("Leftist Min Heap", Leftist(H.fromList H.Min))
+  , ("Leftist Max Heap", Leftist(H.fromList H.Max))
   ]
 
 heapPropertiesFor :: Builder -> [TestTree]

@@ -51,24 +51,36 @@ _right (Nil p) = _empty p
 _right (Node _ _ _ _ rt) = rt
 
 _insert :: (Ord a) => a -> Leftist a -> Leftist a
+_insert v (Nil p) = singleton p v
 _insert v heap@(Node p _ _ _ _) = merge heap (singleton p v)
 
 _remove :: (Ord a) => Leftist a -> (Maybe a, Leftist a)
-_remove heap = (_value heap, merge (_left heap) (_right heap))
+_remove (Nil p) = (Nothing, _empty p)
+_remove heap    = (_value heap, merge (_left heap) (_right heap))
 
 -- private
 merge :: (Ord a) => Leftist a -> Leftist a -> Leftist a
 merge a (Nil _) = a
 merge (Nil _) b = b
-merge n1@(Node p rank1 r1 lt1 rt1) n2@(Node _ rank2 r2 lt2 rt2) =
-  if hcompare p r1 r2
-     then Node p rank1 r1 lt1 (merge rt1 n1)
-     else Node p rank2 r2 lt2 (merge rt2 n1)
+merge n1@(Node p _ r1 lt1 rt1) n2@(Node _ _ r2 _ _) =
+  if hcompare p r2 r1
+     then merge n2 n1
+     else let merged    = merge rt1 n2
+              leftDist  = dist lt1
+              rightDist = dist merged
+           in if rightDist > leftDist
+                 then Node p (leftDist  + 1) r1 merged lt1
+                 else Node p (rightDist + 1) r1 lt1 merged
+
+-- private
+dist :: Leftist a -> Int
+dist (Nil _)          = -1
+dist (Node _ d _ _ _) = d
 
 singleton :: H.Policy -> a -> Leftist a
 singleton p v = Node p 0 v (Nil p) (Nil p)
 
 -- private
 hcompare :: (Ord a) => H.Policy -> (a -> a -> Bool)
-hcompare H.Max= (>)
-hcompare H.Min= (<)
+hcompare H.Max = (>)
+hcompare H.Min = (<)
